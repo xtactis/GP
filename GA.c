@@ -646,7 +646,7 @@ void save_tree(FILE *file, Node *root) {
         fprintf(file, "l %" PRIu64 " ", root->discrete_value);
         return;
     }
-    fprintf(file, "n %" PRIu64 " %" PRIuFAST8, root->feature, feature_discrete[root->feature]);
+    fprintf(file, "n %" PRIu64 " %" PRIuFAST8 " ", root->feature, feature_discrete[root->feature]);
     if (feature_discrete[root->feature]) {
         fprintf(file, "%" PRIu64 " ", root->split.attribute_index);
     } else {
